@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* You must use a DIFFERENT FONT THAT THIS ONE as your webfont */
+
+/*************************************************
+            DEFAULTS
+*************************************************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+
+    /* change this font stack to your own choices */
+    line-height: 1.5;
+}
+
+p {}
+
+a {}
+
+ul {}
+
+ol {}
+
+li {}
+
+img {
+    width: 25%;
+}
+
+/*************************************************
+            HEADER
+*************************************************/
+header {
+    padding: 5rem 6rem;
+    color: black;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/1.jpg);
+    border-top: 2rem solid hsl(224, 39%, 37%);
+}
+
+header > h1 {
+    text-shadow: 5px 4px 5px hsl(222, 61%, 40%);
+    font-size: 2rem;
+    padding: 4rem 0rem 2rem 0rem;
+    color: color: hsl(235, 64%, 80%);
+
+}
+
+header > h2 {
+    text-shadow: 5px 4px 5px hsl(222, 61%, 40%);
+    font-size: 2rem;
+    padding: 1rem 0rem 3rem 0rem;
+    color: color: hsl(235, 64%, 80%);
+
+}
+
+/*************************************************
+            NAVMENU
+*************************************************/
+nav {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(184, 28%, 31%);
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+nav > a,
+nav > a:visited,
+nav > a:link {
+    color: #999;
+}
+
+nav > a:active,
+nav > a:focus,
+nav > a:hover {
+    color: #999;
+    padding: 0rem 0rem 0rem 1rem;
+}
+
+
+/*************************************************
+            MAIN CONTENT
+*************************************************/
+main {
+    display: grid;
+    grid-template-areas:
+        "A B C";
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.first {
+    grid-area: A;
+}
+
+.second {
+    grid-area: B;
+}
+
+.third {
+    grid-area: C;
+}
+
+section {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+section p {
+    text-align: justify;
+}
+
+section p img {
+    margin-right: 0.5rem;
+    float: left;
+}
+
+section > h1 {
+    font-family: Verdana;
+    color: hsl(186, 41%, 35%);
+    text-decoration: underline;
+}
+
+section > h2 {
+    text-decoration: underline;
+    font-family: Verdana;
+    color: hsl(186, 41%, 35%);
+}
+
+/*************************************************
+            FOOTER
+*************************************************/
+footer {
+    border-top: 1rem solid;
+    display: grid;
+    grid-template-areas: "GA GB";
+}
+
+
+.foot nav {
+    grid-area: "GA";
+}
+
+.foot section {
+    padding: 1rem 1rem;
+    grid-area: "GB";
+}
+
+.foot dl {}
+
+.foot dt {}
+
+.foot dd {}
+
+.foot dd a,
+.foot dd a:visited {}
+
+.foot dd a:active,
+.foot dd a:focus,
+.foot dd a:hover {
+    color: hsl(346, 94%, 61%);
+    text-decoration: underline;
+}
+
+button {
+    background-color: hsl(247, 94%, 61%);
+}
+
+form .form-box,
+input {
+    margin: 0rem 1rem 1rem 1rem;
+}
+
+form .form-box,
+input,
+select,
+textarea,
+button {
+    padding: 12px 20px;
+    width: 100%;
+    margin: 8px 0;
+    display: inline-block;
+}
+
+/*************************************************
+            MEDIA QUERIES for layout
+*************************************************/
+@media (max-width: 599px) {
+    main {
+        display: grid;
+        grid-template-areas:
+            "A"
+            "B"
+            "C";
+        /*        padding: 1rem 1rem 1rem 2rem;*/
+    }
+
+
+    .mainnav {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    s header {
+        background-image: url(../img/1.jpg);
+        border-top: 2rem solid hsl(224, 39%, 37%);
+    }
+
+    header h1,
+    header h2 {
+        padding: 0rem 0rem 0.5rem;
+        color: hsl(235, 64%, 80%);
+    }
+
+    .segment {
+        grid-template-areas:
+            "A"
+            "B"
+            "C";
+    }
+
+    .first {
+        grid-area: A;
+    }
+
+    .second {
+        grid-area: B;
+    }
+
+    .third {
+        grid-area: C;
+    }
+
+    .mainnav a {
+        /*        flex-direction: row;*/
+        /*        justify-content: space-around;*/
+        color: hsl(346, 94%, 61%);
+        border-bottom: 1px solid hsl(346, 94%, 61%);
+
+    }
+
+    section {
+
+        display: grid;
+        grid-template-columns: 1ftr 1ftr;
+
+    }
+
+    section p {
+        text-align: justify;
+    }
+
+    section p img {
+        float: left;
+        padding: 0rem 1rem 0rem 0rem;
+        width: 40%;
+    }
+
+    form .form-box input,
+    select,
+    textarea,
+    button {
+        widows: 100%;
+    }
+
+
+
+    main h1 {
+        margin-bottom: 1rem;
+    }
+
+    main h2 {
+        margin-bottom: 1rem;
+    }
+
+    .foot {
+        border-color: rgb(80, 80, 80);
+        display: grid;
+        grid-template-areas:
+            "AA"
+            "BB";
+    }
+
+    .subnav {
+        grid-area: BB;
+    }
+
+    .comments {
+        grid-area: AA;
+    }
+
+    .comments form-box input {
+        padding: 4rem;
+        margin-right: 4rem;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width:999px) {
+    header {
+        background-image: url(../img/1.jpg);
+
+    }
+
+    .primary {
+        display: grid;
+        /*        grid-template-columns: 1ftr 1ftr 1ftr;*/
+        grid-template-areas: "A A"
+            "B C";
+        grid-gap: 1.5rem;
+
+    }
+
+    .first {
+        grid-area: A;
+    }
+
+    .second {
+        grid-area: B;
+    }
+
+    .third {
+        grid-area: C;
+    }
+
+    .mainnav a {
+        flex-direction: row;
+        justify-content: space-around;
+        color: rgb(80, 80, 80);
+        border-bottom: 1px solid rgb(80, 80, 80);
+    }
+
+    section {}
+
+    section p {}
+
+    section p img {
+        float: left;
+        padding: 0rem 1rem 0rem 0rem;
+    }
+
+    .docs {
+        padding: 1rem;
+    }
+
+    .channels {
+        padding: 1rem;
+    }
+
+    form .form-box input,
+    select,
+    textarea,
+    button {
+        widows: 100%;
+
+    }
+
+    .foot {
+        display: grid;
+        grid-template-areas:
+            "A"
+            "B";
+        border-color: rgb(80, 80, 80);
+    }
+
+    .subnav {
+        grid-area: "B";
+        /*
+        grid-template-areas: "primary" 
+                              "another";   
+*/
+    }
+
+    .comments {
+        grid-area: "A";
+    }
+
+    main h1 {
+        margin-bottom: 1rem;
+
+    }
+
+    main h2 {
+        margin-bottom: 1rem;
+
+    }
+
+}
+
+
+@media (min-width: 1000px) {
+    .mainnav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    header {
+        background-image: url(../img/1.jpg);
+        border-top: 2rem solid hsl(224, 39%, 37%);
+    }
+
+    header h1,
+    header h2 {
+        padding: 1rem 0rem 0.5rem;
+        color: color: hsl(235, 64%, 80%);
+
+    }
+
+    .segment {
+        grid-template-areas:
+            "A"
+            "B"
+            "C";
+    }
+
+    .primary {
+        display: grid;
+        grid-template-areas: "A B C";
+        grid-gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .first {
+        grid-area: A;
+    }
+
+    .second {
+        grid-area: B;
+    }
+
+    .third {
+        grid-area: C;
+    }
+
+    .mainnav a {
+        flex-direction: row;
+        justify-content: space-around;
+        color: rgb(80, 80, 80);
+        border-bottom: 1px solid rgb(80, 80, 80);
+    }
+
+    section {}
+
+    section p {
+        text-align: justify;
+
+    }
+
+    section p img {
+        float: left;
+        padding: 0rem 1rem 0rem 0rem;
+        width: 40%;
+    }
+
+    .subnav {
+
+        grid-template-areas: "A", "B";
+
+    }
+
+    .docs {
+        /*        grid-area: "primary";*/
+    }
+
+    .channels {
+        /*        grid-area: "another";*/
+    }
+
+    form .form-box input,
+    select,
+    textarea,
+    button {
+        widows: 100%;
+    }
+
+    footer {
+        border-color: rgb(80, 80, 80);
+    }
+
+    main h1 {
+        margin-bottom: 1rem;
+    }
+
+    main h2 {
+        margin-bottom: 1rem;
+    }
+
+}
